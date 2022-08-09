@@ -1,0 +1,26 @@
+// utils styles
+@import './utils/veriables';
+@import './utils/visuality-hidden';
+@import './utils/placeholders';
+
+// base styles
+@import './base/base';
+@import './base/reset';
+
+// components styles
+@import './componets/buttons';
+@import './componets/container';
+@import './componets/backdrop';
+@import './componets/modal';
+@import './componets/modal-form';
+
+// layout styles
+@import './layout/header';
+@import './layout/contacts';
+@import './layout/section-main';
+@import './layout/section-desc';
+@import './layout/section-subject';
+@import './layout/section-user';
+@import './layout/section-clients';
+@import './layout/footer';
+@import './layout/portfolio';

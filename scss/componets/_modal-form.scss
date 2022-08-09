@@ -1,0 +1,129 @@
+.register-form{
+  text-align: center;
+}
+  
+.register-form-caption {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+  
+.register-form__group {
+  margin-bottom: 20px;
+}
+  
+.register-form__wrap {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+}
+  
+.register-form__wrap:last-child {
+    margin-bottom: 0;
+}
+  
+.register-form__label,
+.register-form__input {
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+}
+  
+.register-form__icon {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+  
+.register-form__input,
+.register-form__mesasage {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 10px;
+  padding-left: 40px;
+  outline: transparent;
+  width: 100%;
+}
+  
+.register-form__input:focus-within,
+.register-form__input:hover,
+.register-form__mesasage:focus-within,
+.register-form__mesasage:hover {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+  
+.register-form__input:focus-within + .register-form__icon,
+  .register-form__input:hover + .register-form__icon{
+  fill: var(--accent-color);
+}
+  
+.register-form__mesasage {
+  resize: none;
+  padding: 16px 12px;
+  height: 120px;
+}
+
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+
+
+
+.register-form-agreement__icon--check {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .register-form-agreement__checkbox:checked + .register-form-agreement__icon & {
+    opacity: 1;
+  }
+
+
+}
+
+.register-form-agreement__icon--uncheck {
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.register-form-agreement__checkbox:checked + .register-form-agreement__icon & {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
+
+.register-form-agreement__icon--check {
+opacity: 0;
+}
+  
+.register-form-agreement__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  color: var(--title-text-color);
+  user-select: none;
+  text-underline-position: under;
+}
+  
+.register-form-agreement-link {
+  color: var(--accent-color);
+}
+  
+  
+.register-form__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  padding: 10px, 52px;
+  border-color: transparent;
+  padding: 10px 52px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
