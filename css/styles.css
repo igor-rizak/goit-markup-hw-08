@@ -465,10 +465,10 @@ opacity: 0;
   height: 120px;
 }
 
-.section-desc__icon {
+/* .section-desc__icon {
   width: 70px;
   height: 70px;
-}
+} 
 
 
 .section-desc__title {
@@ -991,3 +991,7 @@ overflow: hidden;
   letter-spacing: 0.03em;
 }
  */
+
+/* .rule{
+font-size: 1em;
+ } */ 

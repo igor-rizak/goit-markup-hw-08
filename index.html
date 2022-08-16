@@ -22,6 +22,8 @@
     />
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./js/modal.js">
+    <link rel="stylesheet" href="./js/menu.js">
       </head>
   <body>
     <!-- Навігація -->
@@ -29,7 +31,17 @@
       <div class="container">
         <nav class="header-nav">
           <a href="/" class="header-nav__logo leader-nav__logo--top">Web<span class="leader-nav__logo--black">Studio</span></a>
-          <ul class="link list header-nav__list">
+
+          <button class="menu-button is-open" type="button" aria-expanded="false" data-menu-open>
+            <svg class="modal__btn-icon--close" 
+            width="19px" 
+            height="19px" 
+            aria-label="Переключатель мобильного меню">
+              <use class="icon-menu" href="./symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </button>
+
+          <ul class="link list header-nav">
             <li class="header-nav__list">
               <a href="index.html" class="link header-nav__link header-nav__link--accent header-nav__link--underline">Студія</a>
             </li>
@@ -39,7 +51,7 @@
         </nav>
 
         <!-- Контакти -->
-        <ul class="list header-nav__list">
+        <ul class="list header-nav__list header-nav__list--contacts">
           <li class="link">
             <a href="mailto:info@devstudio.com" class="link header-nav__mail">
               <svg class="header-nav__icon">
@@ -144,7 +156,9 @@
           <ul class="list section-desc__list">
             <li class="section-desc__items ">
               <div class="section-desc__container">
-                <svg class="section-desc__icon">
+                <svg class="section-desc__icon"
+                width="65px" 
+                height="70px">
                   <use href="./symbol-defs.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -156,8 +170,11 @@
 
             <li class="section-desc__items ">
               <div class="section-desc__container">
-                <svg class="section-desc__icon">
-                  <use href="./symbol-defs.svg#icon-clock"></use>
+                <svg class="section-desc__icon"
+                width="65px" 
+                height="70px">
+                  <use href="./symbol-defs.svg#icon-clock"
+                  ></use>
                 </svg>
               </div>
               <h3 class="section-desc__title">ПУНКТУАЛЬНІСТЬ</h3>
@@ -168,7 +185,9 @@
 
             <li class="section-desc__items ">
               <div class="section-desc__container">
-                <svg class="section-desc__icon">
+                <svg class="section-desc__icon"
+                width="65px" 
+                height="70px">
                   <use href="./symbol-defs.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -180,7 +199,9 @@
 
             <li class="section-desc__items ">
               <div class="section-desc__container">
-                <svg class="section-desc__icon">
+                <svg class="section-desc__icon"
+                width="65px" 
+                height="70px">
                   <use href="./symbol-defs.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -475,7 +496,7 @@
         </div>
         <div class="logo-link">
           <h3 class="join-footer">приєднуйтесь</h3>
-          <ul class="list footer-block footer-lisl">
+          <ul class="list footer-block footer-list">
             <li>
               <a class="link link-icon" href="">
                 <svg class="footer-icon">
@@ -527,25 +548,73 @@
         </div>
       </div>
     </footer>
+    <!-- mobile menu -->
+    <div class="menu-overlay is-open" data-menu>
+      <ul class="link list">
+        <li>
+          <a href="index.html" class="link link__overlay">Студія</a>
+        </li>
+        <li><a href="portfolio.html" class="link link__overlay">Портфоліо</a></li>
+        <li><a href="" class="link link__overlay">Контакти</a></li>
+      </ul>
+      <ul class="list">
+        <li class="link">
+          <a href="mailto:info@devstudio.com" class="link">
+           info@devstudio.com</a>
+        </li>
+        <li class="link">
+          <a href="tel:+380961111111" class="link">
+            +38 096 111 11 11</a>
+        </li>
+      </ul>
+      <div class="menu-container">
+    <button class="menu-button" type="button"
+    data-menu-close>
+      <svg class="modal__btn-icon--close" 
+      width="19px" 
+      height="19px">
+        <use class="icon-close" href="./symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    </div>
+  </div>
     <script>
       const refs = {
         openModalBtn: document.querySelector('[data-open-modal]'),
         closeModalBtn: document.querySelector('[data-close-modal]'),
         backdrop: document.querySelector('[data-backdrop]'),
       };
-
+      
       refs.openModalBtn.addEventListener('click', toggleModal);
       refs.closeModalBtn.addEventListener('click', toggleModal);
-
+      
       refs.backdrop.addEventListener('click', logBackdropClick);
-
+      
       function toggleModal() {
         refs.backdrop.classList.toggle('is-hidden');
       }
-
+      
       function logBackdropClick() {
         console.log('Ето клик в бекдроп');
       }
-    </script>
+      </script>
+      <script>
+        (() => {
+    const menuOpenBtn = document.querySelector('[data-menu-open]');
+    const menuCloseBtn = document.querySelector('[data-menu-close]');
+  
+    const mobileMenu = document.querySelector('[data-menu]');
+    // const body = document.querySelector('body');
+  
+    menuOpenBtn.addEventListener('click', openModal);
+    menuCloseBtn.addEventListener('click', openModal);
+  
+    function openModal() {
+      mobileMenu.classList.toggle('is-open');
+      // body.classList.toggle('no-scroll');
+    }
+  })();
+      </script>
   </body>
 </html>
+

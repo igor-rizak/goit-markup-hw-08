@@ -1,19 +1,35 @@
 .footer {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #2f303a;
+  color: rgba(255, 255, 255, 0.6);
+  
+  @media screen and (min-width: 1200px) {
     max-width: 1600px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #2f303a;
-    color: rgba(255, 255, 255, 0.6);
+  }
+
   }
   
   .footer-container {
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (max-width: 767px) {
+     text-align: center;}
   }
   
   .footer-block {
+  @media screen and (min-width: 480px) {
+    display: block;}
+  }
+
+
+  .footer-block 
+  {
+    @media screen and (min-width: 768px) {
     display: flex;
-    align-items: baseline;
+    align-items: baseline;}
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   
@@ -56,10 +72,14 @@
   
   
   .logo-block {
+    @media screen and (min-width: 768px) {
     margin-right: 70px;
+    }
   }
   
-  .footer-lisl {
+  .footer-list {
+    display: flex;
+    justify-content: center;
     gap: 10px;
   }
   
@@ -75,8 +95,16 @@
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
-    text-transform: uppercase;}
+    text-transform: uppercase;
+   
   
+   @media screen and (max-width:1199px) {
+  margin-top: 60px;
+  text-align: center;
+  }
+   }
+
+
   .register-join-input {
     margin: 0;
     margin-right: 12px;
@@ -92,6 +120,10 @@
     background-color: transparent;
     color: #ffffff;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 1199px) {
+      width: 450px;
+   }
   }
   
   .register-join-input:hover,
@@ -101,7 +133,11 @@
     
     
   .footer-register-join {
-    margin-left: 93px;
+    @media screen and (min-width: 1200px) {
+    margin-left: 93px;}
+    @media screen and (max-width: 1199px) {
+      display: block;
+      margin-top: 60px;}
   }
   
   
@@ -128,12 +164,19 @@
     box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     border-radius: 4px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 1199px) {
+      margin-top: 20px;
+      display: block;}
+    
    }
   
   
   .block-join {
-    position: relative;;
-    display: inline-block;
+    @media screen and (max-width: 1200px) {
+    display: block;}
+    position: relative;
+    
   }
   
   .footer-icon-join {

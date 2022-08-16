@@ -18,9 +18,15 @@
   }
 }
   
-  .section-main__button {
+.section-main__button {
     display: block;
     margin: 0 auto;
+
+  @media screen and (min-width:480px) {
+    padding: 10px 24px;
+  }
+
+  @media screen and (min-width:1200px) {
     padding: 10px 32px;
   }
-  
+  }
