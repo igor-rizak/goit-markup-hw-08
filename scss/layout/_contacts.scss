@@ -10,7 +10,8 @@
 }
 
   .header-nav__contacts {
-    color: var(--title-text-color);
+        color: var(--title-text-color);
+        margin-bottom: 21px;
     
     &:hover,
     &:focus {

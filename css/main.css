@@ -319,19 +319,47 @@ img {
   }
 }
 
-.header .container,
-.header-nav,
-.header-nav__list {
+.header-nav {
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.header-nav__list {
-  position: relative;
+.header-nav__list--contacts {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .header-nav__list--contacts {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-nav__list--contacts {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header .container, .header-nav, .header-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header .container, .header-nav, .header-nav__list {
+    display: flexbox;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -372,6 +400,7 @@ img {
     padding-top: 25px;
     padding-bottom: 25px;
     margin-right: 88px;
+    margin-left: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -391,9 +420,7 @@ img {
   text-decoration: none;
 }
 
-.header-nav__link,
-.header-nav__mail,
-.header-nav__contacts {
+.header-nav__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
@@ -438,6 +465,9 @@ img {
   background-color: transperent;
   border: none;
   cursor: pointer;
+  position: absolute;
+  top: 21px;
+  right: 25px;
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -493,6 +523,11 @@ img {
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 767px) {
+  .header-nav--none {
+    display: none;
+  }
+}
 .header-nav__mail {
   color: var(--title-text-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -505,6 +540,7 @@ img {
 
 .header-nav__contacts {
   color: var(--title-text-color);
+  margin-bottom: 21px;
 }
 .header-nav__contacts:hover, .header-nav__contacts:focus {
   color: var(--accent-color);
