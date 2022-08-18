@@ -22,32 +22,31 @@
   display: flex;
 }
 
-
+.icon-menu {
+  position: absolute;
+}
 
 .header-nav__list--contacts {
-  display: block;
-  @media screen and (min-width: 768px) {
-    padding-top: 21px;
-    padding-bottom: 21px;
-     }
-     @media screen and (max-width: 767px) {
-display: none;
-     }
+@media screen and (max-width: 767px) {
+display: none;}
+@media screen and (min-width: 768px) {
+  padding-top: 21px;
+  padding-bottom: 21px;}
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .header .container, .header-nav, .header-nav__list {
-  @media screen and (max-width: 1199px) {
- 
   display: flex;
   align-items: center;
-  margin-right: 30px;
-  }
+ 
+  @media screen and (max-width: 1199px) {
+  gap: 30px;}
+
   @media screen and (min-width: 1200px) {
- 
-    display: flexbox;
- 
-    align-items: center;
-    margin-right: 30px;
+  gap: 50px;
 }
 }
    
@@ -73,7 +72,7 @@ display: none;
   
   .leader-nav__logo--top {
     
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 767px) {
       padding-top: 16px;
       padding-bottom: 16px;
       margin-right: auto;
@@ -83,7 +82,6 @@ display: none;
     padding-top: 25px;
     padding-bottom: 25px;
     margin-right: 88px;
-    margin-left: 15px;
   }
   @media screen and (min-width: 1200px) {
     padding-top: 25px;
@@ -124,6 +122,7 @@ display: none;
   }
 
   .header-nav__link--accent{
+    position: relative;
     color: var(--accent-color);
   }
 
@@ -210,4 +209,69 @@ letter-spacing: 0.02em;
 @media screen and (max-width: 767px) {
     .header-nav--none {
     display: none;}
+}
+
+
+.overlay__block {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.overlay__block--link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  color: var(--accent-color);
+}
+
+.overlay__link {
+position: relative;
+font-weight: 500;
+font-size: 18px;
+line-height: calc(24 / 18);
+}
+
+.link__overlay--accent {
+color: var(--accent-color);
+}
+
+
+.overlay__link--icon::after{
+position: absolute;
+content: '';
+width: 22px;
+bottom: 10px;
+
+
+background-color: var(--accent-color);
+
+border: 1px solid rgba(33, 33, 33, 0.2);
+transform: rotate(90deg);
+}
+
+.overlay__contacts {
+font-weight: 500;
+font-size: 34px;
+line-height: calc(40 / 34);
+}
+
+.contacts__menu {
+margin-bottom: 32px;
+}
+
+.overlay__menu-link {
+margin-bottom: 302px;
+}
+
+.overlay__menu-name {
+margin-bottom: 32px;
+}
+.overlay__menu-name:last-child {
+  margin-bottom: 0;
+}
+
+.contacts__menu-block {
+margin-bottom: 64px;
 }

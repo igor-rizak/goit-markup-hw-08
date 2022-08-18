@@ -102,6 +102,9 @@ opacity: 0;
 }
   
 .register-form-agreement__text {
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);

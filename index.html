@@ -31,6 +31,13 @@
       <div class="container">
         <nav class="header-nav">
           <a href="/" class="header-nav__logo leader-nav__logo--top">Web<span class="leader-nav__logo--black">Studio</span></a>
+          <ul class="link list header-nav header-nav--none">
+            <li class="header-nav__list">
+              <a href="index.html" class="link header-nav__link header-nav__link--accent header-nav__link--underline">Студія</a>
+            </li>
+            <li class="header-nav__list"><a href="portfolio.html" class="link header-nav__link">Портфоліо</a></li>
+            <li class="header-nav__list"><a href="" class="link header-nav__link">Контакти</a></li>
+          </ul>
 
           <button class="menu-button is-open" type="button" aria-expanded="false" data-menu-open>
             <svg class="modal__btn-icon--close" 
@@ -40,14 +47,6 @@
               <use class="icon-menu" href="./symbol-defs.svg#icon-menu"></use>
             </svg>
           </button>
-
-          <ul class="link list header-nav header-nav--none">
-            <li class="header-nav__list">
-              <a href="index.html" class="link header-nav__link header-nav__link--accent header-nav__link--underline">Студія</a>
-            </li>
-            <li class="header-nav__list"><a href="portfolio.html" class="link header-nav__link">Портфоліо</a></li>
-            <li class="header-nav__list"><a href="" class="link header-nav__link">Контакти</a></li>
-          </ul>
         </nav>
 
         <!-- Контакти -->
@@ -88,7 +87,7 @@
               </button>
 
                 <form  class="register-form">
-                <strong class="register-form__caption">Залиште свої дані, ми вам передзвонимо</strong>
+                <strong class="register-form-caption">Залиште свої дані, ми вам передзвонимо</strong>
                 <div class="register-form__group" role="group">
                   <label class="register-form__wrap">
                     <span class="register-form__label">Ім'я</span>
@@ -549,25 +548,43 @@
       </div>
     </footer>
     <!-- mobile menu -->
-    <div class="menu-overlay is-open" data-menu>
-      <ul class="link list">
-        <li>
-          <a href="index.html" class="link link__overlay">Студія</a>
+<div class="menu-overlay is-open" data-menu>
+
+  <ul class="link list overlay__menu-link">
+        <li class="overlay__menu-name" >
+          <a href="index.html" class="link link__overlay link__overlay--accent">Студія</a>
         </li>
-        <li><a href="portfolio.html" class="link link__overlay">Портфоліо</a></li>
-        <li><a href="" class="link link__overlay">Контакти</a></li>
+        <li class="overlay__menu-name" ><a href="portfolio.html" class="link link__overlay">Портфоліо</a></li>
+        <li class="overlay__menu-name" ><a href="" class="link link__overlay">Контакти</a></li>
       </ul>
-      <ul class="list">
-        <li class="link">
-          <a href="mailto:info@devstudio.com" class="link">
+
+<ul class="list contacts__menu-block">
+        <li class="link contacts__menu">
+          <a href="mailto:info@devstudio.com" class="link overlay__contacts link__overlay--accent">
            info@devstudio.com</a>
         </li>
         <li class="link">
-          <a href="tel:+380961111111" class="link">
+          <a href="tel:+380961111111" class="link overlay__contacts ">
             +38 096 111 11 11</a>
         </li>
+        </ul>
+
+      <ul class="overlay__block" >
+        <li class="list overlay__link overlay__link--icon" >
+          <a class="link overlay__block--link" href="">Instagram</a>
+        </li>
+        <li class="list overlay__link overlay__link--icon" >
+          <a class="link overlay__block--link" href="">Twitter</a>
+        </li>
+        <li class="list overlay__link overlay__link--icon" >
+          <a class="link overlay__block--link" href="">Facebook</a>
+        </li>
+        <li class="list  overlay__link">
+          <a class="link overlay__block--link" href="">LinkedIn</a>
+        </li>
       </ul>
-      <div class="menu-container">
+
+  <div class="menu-container">
     <button class="menu-button" type="button"
     data-menu-close>
       <svg class="modal__btn-icon--close" 
@@ -576,8 +593,8 @@
         <use class="icon-close" href="./symbol-defs.svg#icon-close"></use>
       </svg>
     </button>
-    </div>
   </div>
+</div>
     <script>
       const refs = {
         openModalBtn: document.querySelector('[data-open-modal]'),
