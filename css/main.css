@@ -74,12 +74,12 @@ img {
   display: block;
   margin: 0 auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .section-main__button {
     padding: 10px 24px;
   }
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) {
   .section-main__button {
     padding: 10px 32px;
   }
@@ -360,7 +360,7 @@ img {
   }
 }
 
-.header .container, .header-nav, .header-nav__list {
+.header .container, .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,15 +368,20 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+
 @media screen and (max-width: 1199px) {
-  .header .container, .header-nav, .header-nav__list {
-    gap: 30px;
+  .header-nav__list {
+    margin-right: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .header .container, .header-nav, .header-nav__list {
-    gap: 50px;
+  .header-nav__list {
+    margin-right: 50px;
   }
+}
+
+.header-nav__list:last-child {
+  margin-right: 0;
 }
 
 @media screen and (max-width: 480px) {
@@ -1396,6 +1401,7 @@ address {
     padding-bottom: 94px;
   }
 }
+
 .portfolio__picture-card {
   position: relative;
   display: block;
@@ -1448,7 +1454,7 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .portfolio__container-card {
-    width: 270px;
+    width: 370px;
   }
 }
 
