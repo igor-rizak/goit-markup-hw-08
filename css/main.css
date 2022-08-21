@@ -97,12 +97,12 @@ img {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 450px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 738px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -514,6 +514,13 @@ img {
 }
 
 .menu-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 48px 40px;
   position: fixed;
   top: 0;
@@ -602,10 +609,6 @@ img {
   margin-bottom: 32px;
 }
 
-.overlay__menu-link {
-  margin-bottom: 302px;
-}
-
 .overlay__menu-name {
   margin-bottom: 32px;
 }
@@ -616,6 +619,26 @@ img {
 
 .contacts__menu-block {
   margin-bottom: 64px;
+}
+
+.logo-block {
+  margin-bottom: 60px;
+}
+
+.flex-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.overlay__menu-link {
+  margin-bottom: auto;
 }
 
 .header-nav__mail {
@@ -780,11 +803,11 @@ img {
     gap: 30px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
   }
 }
 @media screen and (min-width: 480px) {
   .section-desc__items {
+    margin-bottom: 30px;
     width: 450px;
   }
 }
@@ -815,8 +838,11 @@ img {
   color: var(--title-text-color);
   font-size: 14px;
   line-height: 1.71;
-  margin-bottom: 30px;
   margin-top: 10px;
+}
+
+.section-desc__items:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -884,7 +910,6 @@ img {
     gap: 30px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
   }
 }
 .section-user__title {
@@ -1026,14 +1051,14 @@ img {
   gap: 30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -15px;
 }
 @media screen and (max-width: 767px) {
   .section-clients__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1202,7 +1227,6 @@ address {
 }
 @media screen and (max-width: 1199px) {
   .join-footer {
-    margin-top: 60px;
     text-align: center;
   }
 }
@@ -1322,6 +1346,18 @@ address {
 .section__portfolio {
   background: #ffffff;
 }
+@media screen and (max-width: 1199px) {
+  .section__portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__portfolio {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
 
 .portfolio__list-btn {
   display: -webkit-box;
@@ -1331,7 +1367,6 @@ address {
 }
 @media screen and (max-width: 767px) {
   .portfolio__list-btn {
-    padding-top: 60px;
     margin-bottom: 40px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1339,7 +1374,6 @@ address {
 }
 @media screen and (min-width: 768px) {
   .portfolio__list-btn {
-    padding-top: 60px;
     margin-bottom: 30px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1348,7 +1382,6 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .portfolio__list-btn {
-    padding-top: 94px;
     margin-bottom: 50px;
   }
 }
@@ -1385,34 +1418,17 @@ address {
 }
 
 .portfolio__list-card {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-  .portfolio__list-card {
-    margin-left: -90px;
-    margin-top: -30px;
-    padding-bottom: 60px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .portfolio__list-card {
-    margin-left: -30px;
-    margin-top: -30px;
-    padding-bottom: 94px;
-  }
+  gap: 30px;
 }
 
 .portfolio__picture-card {
   position: relative;
   display: block;
-  -ms-flex-preferred-size: 3;
-      flex-basis: 3;
-  margin-left: 30px;
-  margin-top: 30px;
 }
 
 .portfolio__link-card {
@@ -1444,7 +1460,6 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
 }
 @media screen and (min-width: 480px) {
   .portfolio__container-card {
@@ -1500,12 +1515,13 @@ address {
 }
 
 .portfolio__desc-card {
-  padding: 20px 24px;
+  padding: 24px 15px;
   background: #ffffff;
   border: 1px solid #eeeeee;
 }
 
 .portfolio__caption-card {
+  display: block;
   color: var(--primery-text-color);
   font-weight: 700;
   font-size: 18px;

@@ -172,6 +172,8 @@ right: 25px;
 }
  
 .menu-overlay {
+  display: flex;
+  flex-direction: column;
   padding: 48px 40px;
   position: fixed;
   top: 0;
@@ -268,9 +270,6 @@ line-height: calc(40 / 34);
 margin-bottom: 32px;
 }
 
-.overlay__menu-link {
-margin-bottom: 302px;
-}
 
 .overlay__menu-name {
 margin-bottom: 32px;
@@ -281,4 +280,20 @@ margin-bottom: 32px;
 
 .contacts__menu-block {
 margin-bottom: 64px;
+}
+
+
+.logo-block {
+  margin-bottom: 60px;
+}
+
+.flex-menu {
+ 
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.overlay__menu-link {
+  margin-bottom: auto;
 }

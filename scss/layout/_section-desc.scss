@@ -45,15 +45,13 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    margin: -15px;
-   
-    }
-
+   }
 
 }
 
 &__items {
   @media screen and (min-width: 480px){
+    margin-bottom: 30px;
     width: 450px;}
   @media screen and (min-width: 768px){
     width: 354px;}
@@ -82,8 +80,10 @@ margin-right: auto;
   color: var(--title-text-color);
   font-size: 14px;
   line-height: 1.71;
-  margin-bottom: 30px;
-  margin-top: 10px;
-
+ margin-top: 10px;
 }
+}
+
+.section-desc__items:last-child {
+  margin-bottom: 0;
 }

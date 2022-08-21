@@ -1,4 +1,13 @@
 .section__portfolio {
+  @media screen and (max-width: 1199px){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px){
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+
     background: #ffffff;
   }
 
@@ -7,20 +16,17 @@
     gap: 8px;
   
     @media screen and (max-width: 767px){
-      padding-top: 60px;
       margin-bottom: 40px;
       flex-wrap: wrap;
 
       }
 
     @media screen and (min-width: 768px){
-    padding-top: 60px;
     margin-bottom: 30px;
     justify-content: center;
     }
 
     @media screen and (min-width: 1200px){
-    padding-top: 94px;
     margin-bottom: 50px;
     }
   }
@@ -62,33 +68,17 @@
   }
 
   .portfolio__list-card {
-    display: flex;
     flex-wrap: wrap;
-    
-    @media screen and (min-width: 768px) {
-      margin-left: -90px;
-      margin-top: -30px;
-      padding-bottom: 60px;
-      flex-basis: calc(100% / 2 -30px);}
-    
-
-    @media screen and (min-width: 1200px) {
-      margin-left: -30px;
-      margin-top: -30px;
-      padding-bottom: 94px;
-    }
+    display: flex;
+    gap: 30px;
   }
-
+    
   
   
   .portfolio__picture-card {
     position: relative;
     display: block;
-    flex-basis: calc(100% / 3 -30px);
-    margin-top: 30px;
-    @media screen and (min-width: 481px) {
-      margin-left: 30px;
-    }
+ 
   }
   
   .portfolio__link-card{
@@ -113,7 +103,7 @@
   position: relative; 
   overflow: hidden;
   display: flex;
-  gap: 30px;
+
   @media screen and (min-width: 480px) {
     width: 450px;
   }
@@ -160,12 +150,13 @@
   }
   
   .portfolio__desc-card {
-    padding: 20px 24px;
+    padding: 24px 15px;
     background: #ffffff;
     border: 1px solid #eeeeee;
     }
    
     .portfolio__caption-card {
+      display: block;
     color: var(--primery-text-color);
     font-weight: 700;
     font-size: 18px;
